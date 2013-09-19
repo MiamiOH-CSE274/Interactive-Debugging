@@ -145,11 +145,11 @@ Congrats!
 Summary
 =======
 In this lesson you have learned to
-#	Set breakpoints
-#	Run the debugger
-#	Step through your code
-#	Inspect variables through tooltips and through the QuickWatch window
-#	Follow a pattern of thinking in debugging. Always try to:
-##	Predict what should happen
-##	Design a test to see if it did happen as expected
-##	A plan for what to do, based on the outcome of the test
+1.	Set breakpoints
+2.	Run the debugger
+3.	Step through your code
+4.	Inspect variables through tooltips and through the QuickWatch window
+5.	Follow a pattern of thinking in debugging. Always try to:
+  1.	Predict what should happen
+  2.	Design a test to see if it did happen as expected
+  3.	A plan for what to do, based on the outcome of the test
