@@ -144,7 +144,8 @@ Congrats!
 
 Summary
 =======
-In this lesson you have learned to
+In this lesson you have learned to:
+
 1.	Set breakpoints
 2.	Run the debugger
 3.	Step through your code
