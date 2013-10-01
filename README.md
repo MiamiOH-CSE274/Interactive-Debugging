@@ -1,3 +1,6 @@
+Author
+==========
+"Bickley, Daniel", bickledb
 Interactive-Debugging
 =====================
 
