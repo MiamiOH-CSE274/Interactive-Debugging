@@ -15,8 +15,11 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+To generate a sierpinski's triangle given the resolution, and to output the generated image to an html file.
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+Yes, it outputs text with html tags to an html file called "triangle.html".  I believe it will end up in the project directory that I have created.
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+It accepts one input parameter that is an integer.  It is provided to the doTriangle function and will determine the resolution of the Sierpinski's Triangle.
 
 Step 2
 -------
