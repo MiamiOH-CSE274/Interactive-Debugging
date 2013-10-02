@@ -27,7 +27,7 @@ Build and run Sierpinski. An output file called “triangle.html” should be pl
 
 * 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
 The output is not in a triangle. 
-The output contains I's, not just 0.
+The output contains other characters than 8.
 
 
 Step 3
@@ -37,6 +37,8 @@ The first problem I noticed is that I expected the main part of the print-out to
 The characters to print out in the main part of the file are stored in a big array called “grid.” The program is broken into three main parts: (1) Setting up the problem, (2) Filling out “grid,” and (3) Printing “grid.” 
 
 * 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)
+I can insert print lines into the code to see where the strange characters begin to be printed to the screen. Or I can use the debugger and set a breakpoint before the printing begins.
+
 
  
 Step 4
