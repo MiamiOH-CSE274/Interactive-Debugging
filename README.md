@@ -139,6 +139,8 @@ In the previous step you should have discovered that the “grid[i*sideLength +i
 
 * 10.a) What is wrong with the picture now?
 
+Now it's even weirder!  The triangles are all right-aligned, or it's slanted to the right, or something like that.  Not sure how to write it.
+
 Step 11
 -------
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
