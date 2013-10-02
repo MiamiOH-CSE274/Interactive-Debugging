@@ -125,8 +125,9 @@ Step 11
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
 
 * 11.a) Where is the bug, and how should you fix it?
+The bug is "double p3x = sideLength - 1;" To fix this the code should be "double p3x = sideLength/2.0;"
 * 11.b) If I had not commented my code, how would you have discovered which variable to fix? What if I had used crazy variable names like “fooa, foob, fooc, food, fooe, foof” instead of “p1x, p1y, p2x, p2y, p3x, p3y”?
-
+If you had not commented your code, I would have to figured out which varibale was the top middle corner. If you had used crazy variable names it would have been much harder and I might have had to use the debugger.
  
 Step 12
 -------
