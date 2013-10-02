@@ -55,7 +55,7 @@ Step 5
 ------
 In the previous step you should have identified that the bug is occurring in the setup phase of the program. The evidence is that, at the end of the startup phase, the array called “grid” contains lots of weird looking characters, instead of spaces, as we would expect.
 
-* 5.a) Which lines in the code look like they should set the grid to be full of spaces?
+* 5.a) Which lines in the code look like they should set the grid to be full of spaces? It looks like lines 63-65 are where the array should be set to blank spaces.
 
 Step 6
 ------
