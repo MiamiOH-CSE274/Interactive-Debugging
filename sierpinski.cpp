@@ -61,7 +61,7 @@ void doTriangle(int sideLength)
 	grid[sideLength*sideLength] = '\0';
 
 	int i;
-	for(i=0; i < sideLength*sideLength; i++);
+	for(i=0; i < sideLength*sideLength; i++)
 	{
 		grid[i] = ' ';
 	}
@@ -77,7 +77,7 @@ void doTriangle(int sideLength)
 	grid[((int)p2y)*sideLength + (int)p2x] = '8';
 
 	//The third corner is in the middle of the top
-	double p3x = sideLength - 1;
+	double p3x = sideLength/2.0;
 	double p3y = 0;
 	grid[((int)p3y)*sideLength + (int)p3x] = '8';
 
@@ -101,6 +101,7 @@ void doTriangle(int sideLength)
 		case 0:
 			curx = (curx + p1x)/2.0;
 			cury = (cury + p1y)/2.0;
+                break;
 		case 1:
 			curx = (curx + p2x)/2.0;
 			cury = (cury + p2y)/2.0;
@@ -117,7 +118,7 @@ void doTriangle(int sideLength)
 	{
 		for(int j=0;j<sideLength; j++)
 		{
-			outfile << grid[i*sideLength + i];
+			outfile << grid[i*sideLength + j];
 		}
 		outfile << endl;
 	}
