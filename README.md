@@ -1,4 +1,4 @@
-Author
+﻿Author
 ==========
 "Kojs, Michelle", kojsmn
 Interactive-Debugging
@@ -15,8 +15,11 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+The purpose of this program is to create a Sierpinski triangle and write it to a file.
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+Yes the program produces output. The output produced is a file. The file ends up in triangle.html.
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+Yes the input is a triangle size. The input is provided by the user in main when doTriangle method is called.
 
 Step 2
 -------
