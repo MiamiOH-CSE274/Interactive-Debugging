@@ -49,7 +49,7 @@ Next, I will hit the green play button in my toolbar, to “Start Debugging.” 
 When your program stops at the first breakpoint, scroll up until you find the variable “grid” … you shouldn’t have to go up far. Right-click on “grid”, and select QuickWatch. This will open a window that shows you the variable name, its value (which is what the variable contains right now), and its type.
 
 * 4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point?
-I expect the grid to contain nothing before the bug starts hopping. The grid actually contains the strange characters as well as some 8's.
+I expect the grid to contain spaces before the bug starts hopping. The grid actually contains the strange characters as well as some 8's.
 
 Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
 
@@ -111,6 +111,7 @@ At the end of section 1, grid was mostly empty, as we expected. At the end of se
 Can you find the bug? If not, try stepping through the doubly-nested loop. You can put your mouse over ANY variable to see what its current value is, so you don’t have to use QuickWatch unless you want to look at something big (like a whole array, or a class structure). As you step through, you should be looking for anything that could lead to the same character being printed over and over, and only changing from line to line.
 
 * 9.a) What is the bug in the printing loop?
+The bug is the line "grid[i*sideLength + i]". j is not being used and it should be. The correct line is grid[i*sideLength + j].
  
 Step 10
 -------
