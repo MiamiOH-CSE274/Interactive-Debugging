@@ -102,6 +102,8 @@ In the previous step you should have identified the bug: The for loop has a semi
 Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the program, to generate a new triangle.html. Look at it, and see how it looks. 
 
 * 7.a) What problems were fixed in the preceding steps? What errors can we see now?
+
+The weird characters have been removed and replaced with the spaces they were suppsoed to be.  The problem now is that the 8s are all just in rows, instead of nifty triangles.
  
 Step 8
 ------
