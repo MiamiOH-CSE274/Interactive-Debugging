@@ -193,6 +193,8 @@ Make the fix, and re-run your program. If all went well, your program should pro
 
 Congrats!
 
+Yay, I now have a fancy-shmancy Sierpinski triangle.  Link would be jealous!
+
 Summary
 =======
 In this lesson you have learned to:
