@@ -22,7 +22,8 @@ Step 2
 -------
 Build and run Sierpinski. An output file called “triangle.html” should be placed in your project directory, along with your source code. The file should exist, but you will notice that its contents do not look much like the correct output.
 
-* 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
+* 2.a) For one, it's not even a triangle, it's a giant rectangle. It has some eights that are present, but these only go in horizontal rows. The other thing that is interesting is that there seems to be another symbol being placed in all places, 
+* but I'm not sure what this symbol is. Looks like a cross or a lowercase f.
 
 Step 3
 ------
