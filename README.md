@@ -143,14 +143,19 @@ Step 11
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
 
 * 11.a) Where is the bug, and how should you fix it?
+
+The p3x variable is not set correctly. It should be sidelength/2.
+
 * 11.b) If I had not commented my code, how would you have discovered which variable to fix? What if I had used crazy variable names like “fooa, foob, fooc, food, fooe, foof” instead of “p1x, p1y, p2x, p2y, p3x, p3y”?
 
+I would have had to notice that p3y was set to be 0, meaning that was the top line of the output, meaning the top of the triangle.
  
 Step 12
 -------
 In the previous step, you should have discovered that the line “double p3x = sideLength -1;” is incorrect. Instead, it should be “double p3x = sideLength/2.0;”. Make the change, and re-run your program to see how it affects the output. 
 
 * 12.a) What is still wrong with the output?
+The triangle slanted the opposite way.
 
 Step 13
 -------
@@ -158,6 +163,7 @@ Things are looking pretty good now. We have something triangle-like, and the top
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
 
+At this point it must be the printing of the text to the html file that is the problem.
  
 Step 14
 -------
@@ -173,6 +179,7 @@ The other option is to create a break point within each condition. So, for examp
 
 * 14.a) What was the bug?
 
+There is a missing break statement in the case0 section.
  
 Step 15
 -------
