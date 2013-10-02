@@ -29,7 +29,9 @@ The first problem I noticed is that I expected the main part of the print-out to
 
 The characters to print out in the main part of the file are stored in a big array called “grid.” The program is broken into three main parts: (1) Setting up the problem, (2) Filling out “grid,” and (3) Printing “grid.” 
 
-* 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)
+* 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.) I will set breakpoints at the end of the first part of the program
+* to see if the problem is in the setting up the problem section, next I would put a breakpoint after the second section to see if 
+* the problem is in the printing section
 
  
 Step 4
