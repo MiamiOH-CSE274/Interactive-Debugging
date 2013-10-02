@@ -11,9 +11,10 @@ Step 1
 ------
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
-* 1.a) What is the purpose of this program?cow
-* 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
-* 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+* 1.a) What is the purpose of this program?
+     The purpose of this program is to build a sierpinski triangle into a new file with what ever size you want
+* 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up? The program produces does not have an output, but it does have a side effect and that is that a sierpinski triangle is printed into and html file
+* 1.c) Does the program accept input? If so, what kind of input, and how is it provided? The program accepts an integer as an input. It is provided by just typing a number into the main before you run it
 
 Step 2
 -------
