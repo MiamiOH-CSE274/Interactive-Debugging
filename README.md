@@ -126,14 +126,16 @@ Step 12
 In the previous step, you should have discovered that the line “double p3x = sideLength -1;” is incorrect. Instead, it should be “double p3x = sideLength/2.0;”. Make the change, and re-run your program to see how it affects the output. 
 
 * 12.a) What is still wrong with the output?
+Only half of the triangle is visible on the HTML page.
+
 
 Step 13
 -------
 Things are looking pretty good now. We have something triangle-like, and the top point is in the right place. Something still seems weird though … it is as if the little hopping bug prefers to jump down and to the right … there ARE some 8s in the left half of the screen, but almost all of the triangles seem heavily skewed to the left, and down.
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
+I saw that one of the cases in the switch statment lacked a break.
 
- 
 Step 14
 -------
 It seems most likely that the problem with the code is in the middle section, where the triangle is actually generated. From debugging, I convinced myself that we were printing out what was in grid, so the problem must be that grid is being calculated incorrectly.
@@ -147,6 +149,7 @@ You have a couple of options now. One is to just step through the loop for a whi
 The other option is to create a break point within each condition. So, for example, put a break on “case 0”,  a break on “case 1” and a break on “case 2”. Then run the program in the debugger. The first time you hit a particular breakpoint (say the case 2 breakpoint), step through the code and make sure it does what you expected. If so, you can remove that breakpoint, and continue debugging. This way you can try all three cases without having to do a whole lot of manual stepping.
 
 * 14.a) What was the bug?
+There was a missing break statment in one of the switch cases.
 
  
 Step 15
