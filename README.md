@@ -183,7 +183,8 @@ The other option is to create a break point within each condition. So, for examp
 
 * 14.a) What was the bug?
 
- 
+I was right!  The problem lies in the switch statements, where case 0 doesn't have a break statement, so case 1 is also executed whenever case 0 is.
+
 Step 15
 -------
 In the previous step you should have discovered the problem was with the “case 0” case within the switch statement. Whenever you hit case 0, the bug hops halfway to point 1 … but then the program drops through into the “case 1” part, and the bug hops halfway to point 2, as well! This is why the bug seems to never hop left: Any time it hops left, it immediately hops to the right again. The fix for this is to insert the missing break statement, just before “case 1:”.
