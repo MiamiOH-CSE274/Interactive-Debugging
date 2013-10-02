@@ -78,7 +78,7 @@ The “step over” command in the debugging menu is designed to make the progra
 * 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?
 If you are using step over repeatedly, I expect the line "grid[i] = ' '" to be hit 40000 times.
 * 6.b) Try hitting “step over” repeatedly, and see if it does what you expected.
-The line "grid[i] = ' '" never executes.
+The line "grid[i] = ' '" does not execute over and over.
 * 6.c) What is the bug?
 The bug is the semicolon.
 
@@ -89,6 +89,7 @@ In the previous step you should have identified the bug: The for loop has a semi
 Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the program, to generate a new triangle.html. Look at it, and see how it looks. 
 
 * 7.a) What problems were fixed in the preceding steps? What errors can we see now?
+The problems that were fixed in the preceding steps are the strange characters are no longer being printed. The errors now are that the output is not a triangle.
  
 Step 8
 ------
