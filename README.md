@@ -15,8 +15,11 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+The program creates a triangle.
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+The program creates a triangle. output into a HTML document
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+It accept sidelength as a parameter but it doesn't ask for user input.
 
 Step 2
 -------
