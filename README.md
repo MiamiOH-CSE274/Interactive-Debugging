@@ -49,7 +49,7 @@ Hint: In order to get a better look at the contents of grid (which is an array o
 
 If everything was as you expected in question 4.a, then hit the play button again to continue debugging. Repeat the QuickWatch process (inspecting the grid variable) when you hit the next breakpoint.
 
-* 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?
+* 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug? I think the setup is causing our first bug because the array is filled with the wrong characters in the first part.
 
 Step 5
 ------
