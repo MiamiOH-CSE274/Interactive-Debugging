@@ -69,7 +69,7 @@ The “step over” command in the debugging menu is designed to make the progra
 
 * 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly? I would expect it to hit line 65 sidelength * sidelength times
 * 6.b) Try hitting “step over” repeatedly, and see if it does what you expected. Nope it stepped out of the loop
-* 6.c) What is the bug? There is a semi colon before the loop brakets, so the code isn't interated multiple times
+* 6.c) What is the bug? There is a semi colon before the loop brakets, so the code isn't iterated multiple times
 
 Step 7
 ------
