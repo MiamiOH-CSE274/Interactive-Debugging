@@ -17,7 +17,7 @@ Create a project file, and add sierpinski.cpp to the project. Also, look at corr
 * 1.a) What is the purpose of this program?
 To make triangles.
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
-No output.
+The output is "Hello World" in the screen. 
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
 Yes, in this program is double. It is provided by simulating a bug like jumping
 around to make points in order to create triangles.
