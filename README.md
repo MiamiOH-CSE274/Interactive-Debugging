@@ -42,7 +42,8 @@ Next, I will hit the green play button in my toolbar, to “Start Debugging.” 
 
 When your program stops at the first breakpoint, scroll up until you find the variable “grid” … you shouldn’t have to go up far. Right-click on “grid”, and select QuickWatch. This will open a window that shows you the variable name, its value (which is what the variable contains right now), and its type.
 
-* 4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point?
+* 4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point? I expected the array to just be holding
+* a bunch of blank spaces, it actually holds a ton of f's and one 8.
 
 Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
 
