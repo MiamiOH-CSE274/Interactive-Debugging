@@ -109,8 +109,16 @@ Well, the weird characters are gone. Now there are only spaces and 8s, so that i
 Repeat step 4, and try to identify which of the three stages of the program is causing this incorrect output. If grid only contains longs stripes of 8s, then there are probably still problems in the first two stages. If grid contains a mix of 8s and spaces, then the problem is likely in the printing.
 
 * 8.a) What should grid look like at the end of the first stage? What does it actually look like?
+
+After the first stage, the grid should be a bunch of spaces with three 8s in it. This is what it looks like as well.
+
 * 8.b) What should grid look like at the end of the second stage? What does it actually look like?
+
+The grid should look like sierpinski's triangle at this point. In reality, it does not resemble triangles, or any shape for that matter.
+
 * 8.c) Which section is the current bug in?
+
+The bug needs to be in the creation of the triangle, so the second part of the program.
  
 Step 9
 ------
@@ -120,11 +128,15 @@ Can you find the bug? If not, try stepping through the doubly-nested loop. You c
 
 * 9.a) What is the bug in the printing loop?
  
+ The bug, I believe, is the fact that the `outfile` command uses the i variable instead of the j variable, which would mean the 8 gets printed in the same spot for as large as sideLength is.
+ 
 Step 10
 -------
 In the previous step you should have discovered that the “grid[i*sideLength +i]” is incorrect … you really wanted “grid[i*sideLength + j]”. Make the fix, and re-run your code to see if we are closer to having correct output.
 
 * 10.a) What is wrong with the picture now?
+
+Now, the picture is partially printed on the right half of the window, and there isn't a full triangle yet on the screen.
 
 Step 11
 -------
