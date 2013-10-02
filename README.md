@@ -26,7 +26,7 @@ Step 2
 Build and run Sierpinski. An output file called “triangle.html” should be placed in your project directory, along with your source code. The file should exist, but you will notice that its contents do not look much like the correct output.
 
 * 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
-
+The entire page is filled with characters, most of them being the incorrect character as well.  I believe the entire resolution, currently set at 200 is filled instead of there being only the triangles.  And the correct characters '8' only show up as solid lines towards the bottom of the file.
 Step 3
 ------
 The first problem I noticed is that I expected the main part of the print-out to consists only of spaces and 8s, but the output I actually got has some strange characters in it.
