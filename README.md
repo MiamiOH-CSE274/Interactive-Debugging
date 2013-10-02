@@ -77,7 +77,7 @@ In the previous step you should have identified the bug: The for loop has a semi
 
 Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the program, to generate a new triangle.html. Look at it, and see how it looks. 
 
-* 7.a) What problems were fixed in the preceding steps? What errors can we see now?
+* 7.a) What problems were fixed in the preceding steps? What errors can we see now? There are now no f's in the triangle.html file. Now there is a lot of empty space and a couple lines of 8's
  
 Step 8
 ------
