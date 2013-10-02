@@ -32,6 +32,9 @@ Build and run Sierpinski. An output file called “triangle.html” should be pl
 
 * 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
 
+-It's a box, not a nifty Triforce-like Sierpinski triangle
+-Most of the characters aren't 8's, they're some sort of weird cross thing.  There are a few lines of 8's, though.
+
 Step 3
 ------
 The first problem I noticed is that I expected the main part of the print-out to consists only of spaces and 8s, but the output I actually got has some strange characters in it.
