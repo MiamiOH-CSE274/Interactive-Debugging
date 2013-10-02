@@ -146,8 +146,12 @@ Step 11
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
 
 * 11.a) Where is the bug, and how should you fix it?
+
+The problem is that the x-coordinate of the top point is sideLength-1, putting it all the way to the right.  It should be in the middle, so sideLength/2.
+
 * 11.b) If I had not commented my code, how would you have discovered which variable to fix? What if I had used crazy variable names like “fooa, foob, fooc, food, fooe, foof” instead of “p1x, p1y, p2x, p2y, p3x, p3y”?
 
+I would have had to set a breakpoint before the assignment of the vertices, and step through to see what the values changed to.  Crazy variable names are just rude!  I guess using the debugger might've helped there too, but the important thing is to always name your variables accurately and clearly.
  
 Step 12
 -------
