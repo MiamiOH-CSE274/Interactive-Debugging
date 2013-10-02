@@ -26,15 +26,16 @@ Step 2
 Build and run Sierpinski. An output file called “triangle.html” should be placed in your project directory, along with your source code. The file should exist, but you will notice that its contents do not look much like the correct output.
 
 * 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
+	Rather than looking like an actual Sierpinski triangle, triangle.html is just a huge block of characters resembling the number '1', with a few lines of '8's thrown in randomly in hte bottom half of the block.
 
 Step 3
 ------
-The first problem I noticed is that I expected the main part of the print-out to consists only of spaces and 8s, but the output I actually got has some strange characters in it.
+The first problem I noticed is that I expected the main part of the print-out to consist only of spaces and 8s, but the output I actually got has some strange characters in it.
 
 The characters to print out in the main part of the file are stored in a big array called “grid.” The program is broken into three main parts: (1) Setting up the problem, (2) Filling out “grid,” and (3) Printing “grid.” 
 
 * 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)
-
+	I would most likely insert several print lines into the code so that I would be able to better pinpoint where the error began.  I would then look into that section of code in more detail so that I would be able to fix the problem.
  
 Step 4
 ------
