@@ -43,6 +43,7 @@ The characters to print out in the main part of the file are stored in a big arr
 
 * 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)
 
+Well, I could comb over every letter of code to see if there were any easily discoverable and fixable errors.  But since this is the "Interactive Debugging" lab, I'm going to go out on a limb here and say that another, better way to do it would be to set break points after each of these main parts of the program.
  
 Step 4
 ------
