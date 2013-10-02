@@ -28,6 +28,7 @@ void doTriangle(int sideLength)
 	outfile << "<HTML><HEAD><TITLE>A Sierpinski Triangle, size " << sideLength << "</TITLE></HEAD>" << endl;
 	outfile << "<H1>A Sierpinski Triangle, size " << sideLength << "</H1>" << endl;
 	outfile << "<font size=1><pre>" << endl;
+    
 
 	/* To generate a Sierpinski triangle, we will simulate a bug hopping around on a piece of paper.
 	 * Imagine a bug is soaked in ink, and then placed on a paper. He hops around, but in a very precise

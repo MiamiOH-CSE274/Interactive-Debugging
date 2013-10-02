@@ -15,8 +15,11 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+-To create an example of a Sierpinski triangle using the character '8', and print it into an html document
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+This program creates an image in the likeness to a Sierpinski triangle, and saves it into the same .html document every time you run it, overwriting the previous run's output.
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+The method doTriangle(int) accepts an int for side length, that determines the dimensions of the output triangle.  The main() method passes the integer to doTriangle(), so to edit it's size, we have to change the code of main().
 
 Step 2
 -------
