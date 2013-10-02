@@ -14,9 +14,9 @@ Step 1
 ------
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
-* 1.a) What is the purpose of this program?
-* 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
-* 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+* 1.a) The purpose of the program is to generate a Serpinski Triangle.  
+* 1.b) Yes the program does produce output, the output goes to the "correct-triangle.html" file. 
+* 1.c) The program does not accept any input, although one could modify it to take input as the doTriangle method takes an arbitrary integer.
 
 Step 2
 -------
