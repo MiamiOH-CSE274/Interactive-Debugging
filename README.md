@@ -55,11 +55,15 @@ When your program stops at the first breakpoint, scroll up until you find the va
 
 * 4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point?
 
+I would expect it to contain the three points of the triangle and then a bunch of spaces.  Instead of spaces, it has those characters I thought were cross-like things.  Turns out their accented capital I's, but I don't imagine that actually matters much.
+
 Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
 
 If everything was as you expected in question 4.a, then hit the play button again to continue debugging. Repeat the QuickWatch process (inspecting the grid variable) when you hit the next breakpoint.
 
 * 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?
+
+Everything was not as I would expect, so I believe the first bug is in the setup portion of the program.
 
 Step 5
 ------
