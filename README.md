@@ -1,4 +1,4 @@
-Author
+﻿Author
 ==========
 "Bailey, Sam", baileys2
 Interactive-Debugging
@@ -15,8 +15,11 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+	This program will build, save, and display a Sierpinski triangle.
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+	The program will produce a series of characters on the screen (the number 8), and the characters will supposedly be arranged in the shape of a Sierpinski triangle.
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+	The program does not ask the user for any input directly...However, the programmer may go into the code in the main method and adjust the size of the triangle manually.
 
 Step 2
 -------
