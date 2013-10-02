@@ -167,6 +167,7 @@ Things are looking pretty good now. We have something triangle-like, and the top
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
 
+I think the issue occurs in the middle section, with the switch statements.  One of the cases doesn't have a break.
  
 Step 14
 -------
