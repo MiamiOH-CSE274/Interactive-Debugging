@@ -133,7 +133,7 @@ Step 13
 Things are looking pretty good now. We have something triangle-like, and the top point is in the right place. Something still seems weird though … it is as if the little hopping bug prefers to jump down and to the right … there ARE some 8s in the left half of the screen, but almost all of the triangles seem heavily skewed to the left, and down.
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
-
+I think the "part 2" portion of the code.  I think the the picking the random corner area is the issue, potentially the random point or the switch statements.
  
 Step 14
 -------
