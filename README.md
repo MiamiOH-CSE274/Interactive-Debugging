@@ -1,4 +1,4 @@
-Author
+﻿Author
 ==========
 "Bailey, Sam", baileys2
 Interactive-Debugging
@@ -15,8 +15,16 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+
+	This program will build, save, and display a Sierpinski triangle.
+
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+
+	The program will produce a series of characters on the screen (the number 8), and the characters will supposedly be arranged in the shape of a Sierpinski triangle.
+
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+
+	The program does not ask the user for any input directly...However, the programmer may go into the code in the main method and adjust the size of the triangle manually.
 
 Step 2
 -------
@@ -24,14 +32,17 @@ Build and run Sierpinski. An output file called “triangle.html” should be pl
 
 * 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
 
+	Rather than looking like an actual Sierpinski triangle, triangle.html is just a huge block of characters resembling the number '1', with a few lines of '8's thrown in randomly in the bottom half of the block.
+
 Step 3
 ------
-The first problem I noticed is that I expected the main part of the print-out to consists only of spaces and 8s, but the output I actually got has some strange characters in it.
+The first problem I noticed is that I expected the main part of the print-out to consist only of spaces and 8s, but the output I actually got has some strange characters in it.
 
 The characters to print out in the main part of the file are stored in a big array called “grid.” The program is broken into three main parts: (1) Setting up the problem, (2) Filling out “grid,” and (3) Printing “grid.” 
 
 * 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)
 
+	I would most likely insert several print lines into the code so that I would be able to better pinpoint where the error began.  I would then look into that section of code in more detail so that I would be able to fix the problem.
  
 Step 4
 ------
@@ -43,17 +54,23 @@ When your program stops at the first breakpoint, scroll up until you find the va
 
 * 4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point?
 
+	Before the bug started hopping, I would expect to find a lot of empty space in the grid.  However, when I looked at the grid I saw a lot of weird symbols resembling an 'I'.
+
 Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
 
 If everything was as you expected in question 4.a, then hit the play button again to continue debugging. Repeat the QuickWatch process (inspecting the grid variable) when you hit the next breakpoint.
 
 * 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?
 
+	Based on what I've seen so far, I would say that the first bug is in the setup portion of the program.
+
 Step 5
 ------
 In the previous step you should have identified that the bug is occurring in the setup phase of the program. The evidence is that, at the end of the startup phase, the array called “grid” contains lots of weird looking characters, instead of spaces, as we would expect.
 
 * 5.a) Which lines in the code look like they should set the grid to be full of spaces?
+
+	Lines 62-66 seem to be responsible for filling the grid with empty spaces.
 
 Step 6
 ------
@@ -66,8 +83,16 @@ At first it looks like this code should work. The for loop seems to be using its
 The “step over” command in the debugging menu is designed to make the program execute the current line, and then stop on the next line of code that would be executed. In a loop, for example, each step should move you one line down the body of the loop, then when you step at the end of the loop it should take you back to the top. You should step through the body of the loop one time for each iteration of the loop.
 
 * 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?
+
+	I would expect to have to hit the "step over" button once for each iteration of the loop, so approximately 40000 times.
+
 * 6.b) Try hitting “step over” repeatedly, and see if it does what you expected.
+
+	It skips over the entire loop with one click...so I was just a bit off with my guess.  And by a bit I mean a lot.
+
 * 6.c) What is the bug?
+
+	There is a semicolon at the end of the for loop, which is causing the program to skip over the body of the loop.
 
 Step 7
 ------
@@ -77,6 +102,8 @@ Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the prog
 
 * 7.a) What problems were fixed in the preceding steps? What errors can we see now?
  
+	By getting rid of the semi-colon, there are no longer any strange symbols (still not sure exactly what they were...).  The symbols were replaced by white space, but the lines of 8's that were there previously are still there.
+
 Step 8
 ------
 Well, the weird characters are gone. Now there are only spaces and 8s, so that is good … but now we can see that what is getting printed out is not very triangle-like. In fact, did you notice that each row just contains repeats of the same character? Some rows have 8s, some have spaces, but it seems like there are not any rows that contain a mix.
@@ -84,8 +111,16 @@ Well, the weird characters are gone. Now there are only spaces and 8s, so that i
 Repeat step 4, and try to identify which of the three stages of the program is causing this incorrect output. If grid only contains longs stripes of 8s, then there are probably still problems in the first two stages. If grid contains a mix of 8s and spaces, then the problem is likely in the printing.
 
 * 8.a) What should grid look like at the end of the first stage? What does it actually look like?
+
+	The grid should be mostly empty (white) space, which it also actually looks like.
+
 * 8.b) What should grid look like at the end of the second stage? What does it actually look like?
+
+	The grid should contain both white space and 8's, which it also actually looks like.
+
 * 8.c) Which section is the current bug in?
+
+	The bug should be in the printing section.
  
 Step 9
 ------
@@ -94,6 +129,8 @@ At the end of section 1, grid was mostly empty, as we expected. At the end of se
 Can you find the bug? If not, try stepping through the doubly-nested loop. You can put your mouse over ANY variable to see what its current value is, so you don’t have to use QuickWatch unless you want to look at something big (like a whole array, or a class structure). As you step through, you should be looking for anything that could lead to the same character being printed over and over, and only changing from line to line.
 
 * 9.a) What is the bug in the printing loop?
+
+	Only the first value of the loop is being printed on each line, most likely because i is being added at the end of the outfile line rather than j.
  
 Step 10
 -------
@@ -101,13 +138,19 @@ In the previous step you should have discovered that the “grid[i*sideLength +i
 
 * 10.a) What is wrong with the picture now?
 
+	Now, only a portion of the triangle is printed, on the right side of the screen.
+
 Step 11
 -------
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
 
 * 11.a) Where is the bug, and how should you fix it?
+
+	This time the bug is in the line where the variable p3x is assigned a value.  This variable's value should not be "sideLength - 1", but should instead be "sideLength/2.0".
+
 * 11.b) If I had not commented my code, how would you have discovered which variable to fix? What if I had used crazy variable names like “fooa, foob, fooc, food, fooe, foof” instead of “p1x, p1y, p2x, p2y, p3x, p3y”?
 
+	It would have been significantly more difficult to find the bug if there were no comments.  I most likely would have had to go through the code line by line until I found the error, which would be both time consuming and frustrating.
  
 Step 12
 -------
@@ -115,12 +158,15 @@ In the previous step, you should have discovered that the line “double p3x = s
 
 * 12.a) What is still wrong with the output?
 
+	The whole triangle is still not being displayed, and looks somewhat like it is leaning.
+
 Step 13
 -------
 Things are looking pretty good now. We have something triangle-like, and the top point is in the right place. Something still seems weird though … it is as if the little hopping bug prefers to jump down and to the right … there ARE some 8s in the left half of the screen, but almost all of the triangles seem heavily skewed to the left, and down.
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
 
+	One of the cases in the switch statement does not have a break at the end of it.
  
 Step 14
 -------
@@ -136,6 +182,7 @@ The other option is to create a break point within each condition. So, for examp
 
 * 14.a) What was the bug?
 
+	As I mentioned before, there is a missing break statement in the first case of the switch statement.
  
 Step 15
 -------
