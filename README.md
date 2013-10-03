@@ -116,7 +116,7 @@ Step 11
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
 
 * 11.a) Where is the bug, and how should you fix it?
-The bug is on line 79. "double p3x = sideLength - 1;" This is the same cordinate like the first and second corner. It should be in the middle, thus it should be divied by two, instead of subtract by 1. 
+The bug is on line 79. "double p3x = sideLength - 1;" This is the same cordinate properties as the first and second corner. It should be in the middle, thus it should be divied by two, instead of subtract by 1. 
 * 11.b) If I had not commented my code, how would you have discovered which variable to fix? What if I had used crazy variable names like “fooa, foob, fooc, food, fooe, foof” instead of “p1x, p1y, p2x, p2y, p3x, p3y”?
 I will have to find the section where all the vertices are defined. If the names are crazy, then I will have to Quick watch every variable to see their result. 
  
@@ -131,7 +131,7 @@ Step 13
 Things are looking pretty good now. We have something triangle-like, and the top point is in the right place. Something still seems weird though … it is as if the little hopping bug prefers to jump down and to the right … there ARE some 8s in the left half of the screen, but almost all of the triangles seem heavily skewed to the left, and down.
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
-
+I think some code within the portion of code that filling up the grid is causing the problem. 
  
 Step 14
 -------
@@ -146,7 +146,7 @@ You have a couple of options now. One is to just step through the loop for a whi
 The other option is to create a break point within each condition. So, for example, put a break on “case 0”,  a break on “case 1” and a break on “case 2”. Then run the program in the debugger. The first time you hit a particular breakpoint (say the case 2 breakpoint), step through the code and make sure it does what you expected. If so, you can remove that breakpoint, and continue debugging. This way you can try all three cases without having to do a whole lot of manual stepping.
 
 * 14.a) What was the bug?
-
+Case 0 doesn't have a break after the code. 
  
 Step 15
 -------
