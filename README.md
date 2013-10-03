@@ -82,7 +82,7 @@ In the previous step you should have identified the bug: The for loop has a semi
 Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the program, to generate a new triangle.html. Look at it, and see how it looks. 
 
 * 7.a) What problems were fixed in the preceding steps? What errors can we see now?
- 
+Now we have fixed the strange characters from appearing and are correctly having spaces appear.  Now the errors are that the '8's are showing up incorrectly, they only show up as solid lines towards the bottom of the file.
 Step 8
 ------
 Well, the weird characters are gone. Now there are only spaces and 8s, so that is good … but now we can see that what is getting printed out is not very triangle-like. In fact, did you notice that each row just contains repeats of the same character? Some rows have 8s, some have spaces, but it seems like there are not any rows that contain a mix.
