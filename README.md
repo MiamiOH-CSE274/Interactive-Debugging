@@ -110,6 +110,7 @@ Step 10
 In the previous step you should have discovered that the “grid[i*sideLength +i]” is incorrect … you really wanted “grid[i*sideLength + j]”. Make the fix, and re-run your code to see if we are closer to having correct output.
 
 * 10.a) What is wrong with the picture now?
+It has the correct number of outputs I believe but they are skewed to the right.  It also seems like the corners (at least on the left side) may be correct but the rest of the triangle is in the incorrect position for all of the triangles.
 
 Step 11
 -------
