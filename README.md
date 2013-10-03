@@ -70,9 +70,11 @@ At first it looks like this code should work. The for loop seems to be using its
 The “step over” command in the debugging menu is designed to make the program execute the current line, and then stop on the next line of code that would be executed. In a loop, for example, each step should move you one line down the body of the loop, then when you step at the end of the loop it should take you back to the top. You should step through the body of the loop one time for each iteration of the loop.
 
 * 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?
+40,000 times.
 * 6.b) Try hitting “step over” repeatedly, and see if it does what you expected.
+It does not, it immediately jumps out of the loop and continues on with the next lines of code outside of the loop.
 * 6.c) What is the bug?
-
+There is a semicolon on line 63 after the for loop which should be deleted.
 Step 7
 ------
 In the previous step you should have identified the bug: The for loop has a semi-colon after it! This means that the “body of the loop” was not getting executed over and over (as we desired), but instead was only executed once, when i was 40000. 
