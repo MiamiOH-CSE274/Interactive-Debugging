@@ -95,13 +95,13 @@ At the end of section 1, grid was mostly empty, as we expected. At the end of se
 
 Can you find the bug? If not, try stepping through the doubly-nested loop. You can put your mouse over ANY variable to see what its current value is, so you don’t have to use QuickWatch unless you want to look at something big (like a whole array, or a class structure). As you step through, you should be looking for anything that could lead to the same character being printed over and over, and only changing from line to line.
 
-* 9.a) What is the bug in the printing loop? The bug is on line 119, the correct line should be "grid[j*sidelength+i]
+* 9.a) What is the bug in the printing loop? The bug is on line 119, the correct line should be "grid[j*sidelength+i], Well after reading 10 I realize I was wrong with my previous answer, but there is no reason to state what is below
  
 Step 10
 -------
 In the previous step you should have discovered that the “grid[i*sideLength +i]” is incorrect … you really wanted “grid[i*sideLength + j]”. Make the fix, and re-run your code to see if we are closer to having correct output.
 
-* 10.a) What is wrong with the picture now?
+* 10.a) What is wrong with the picture now? The 8's don't really make pyramids and they are really skinny and only about half a pyramid
 
 Step 11
 -------
