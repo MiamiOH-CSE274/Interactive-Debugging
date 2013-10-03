@@ -102,6 +102,8 @@ Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the prog
 
 * 7.a) What problems were fixed in the preceding steps? What errors can we see now?
  
+	By getting rid of the semi-colon, there are no longer any strange symbols (still not sure exactly what they were...).  The symbols were replaced by white space, but the lines of 8's that were there previously are still there.
+
 Step 8
 ------
 Well, the weird characters are gone. Now there are only spaces and 8s, so that is good … but now we can see that what is getting printed out is not very triangle-like. In fact, did you notice that each row just contains repeats of the same character? Some rows have 8s, some have spaces, but it seems like there are not any rows that contain a mix.
@@ -109,8 +111,16 @@ Well, the weird characters are gone. Now there are only spaces and 8s, so that i
 Repeat step 4, and try to identify which of the three stages of the program is causing this incorrect output. If grid only contains longs stripes of 8s, then there are probably still problems in the first two stages. If grid contains a mix of 8s and spaces, then the problem is likely in the printing.
 
 * 8.a) What should grid look like at the end of the first stage? What does it actually look like?
+
+	The grid should be mostly empty (white) space, which it also actually looks like.
+
 * 8.b) What should grid look like at the end of the second stage? What does it actually look like?
+
+	The grid should contain both white space and 8's, which it also actually looks like.
+
 * 8.c) Which section is the current bug in?
+
+	The bug should be in the printing section.
  
 Step 9
 ------
