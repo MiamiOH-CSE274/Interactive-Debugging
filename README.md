@@ -70,6 +70,8 @@ In the previous step you should have identified that the bug is occurring in the
 
 * 5.a) Which lines in the code look like they should set the grid to be full of spaces?
 
+	Lines 62-66 seem to be responsible for filling the grid with empty spaces.
+
 Step 6
 ------
 Once you have found the line that says “grid[i] = ‘ ‘;”, it may or may not be obvious to you what the bug is. The bug is of a type that is VERY easy to over-look, and probably most of the class doesn’t see it. Imagine that you can’t find the bug just by looking at the code. Next, we will use interactive debugging to narrow things down a bit more.
@@ -81,8 +83,16 @@ At first it looks like this code should work. The for loop seems to be using its
 The “step over” command in the debugging menu is designed to make the program execute the current line, and then stop on the next line of code that would be executed. In a loop, for example, each step should move you one line down the body of the loop, then when you step at the end of the loop it should take you back to the top. You should step through the body of the loop one time for each iteration of the loop.
 
 * 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?
+
+	I would expect to have to hit the "step over" button once for each iteration of the loop, so approximately 40000 times.
+
 * 6.b) Try hitting “step over” repeatedly, and see if it does what you expected.
+
+	It skips over the entire loop with one click...so I was just a bit off with my guess.  And by a bit I mean a lot.
+
 * 6.c) What is the bug?
+
+	There is a semicolon at the end of the for loop, which is causing the program to skip over the body of the loop.
 
 Step 7
 ------
