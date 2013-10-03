@@ -21,6 +21,7 @@ Create a project file, and add sierpinski.cpp to the project. Also, look at corr
 	
 	Yes, the program produce output. The output will be an HTML file. 
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+
 	It does not accept user input. We can assign side length of the triangle as a input in the program when we call doTriangle method. 
 Step 2
 -------
