@@ -166,6 +166,7 @@ Things are looking pretty good now. We have something triangle-like, and the top
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
 
+	One of the cases in the switch statement does not have a break at the end of it.
  
 Step 14
 -------
@@ -181,6 +182,7 @@ The other option is to create a break point within each condition. So, for examp
 
 * 14.a) What was the bug?
 
+	As I mentioned before, there is a missing break statement in the first case of the switch statement.
  
 Step 15
 -------
