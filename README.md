@@ -54,9 +54,9 @@ When your program stops at the first breakpoint, scroll up until you find the va
 
 * 4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point?
 
-Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
-
 	Before the bug started hopping, I would expect to find a lot of empty space in the grid.  However, when I looked at the grid I saw a lot of weird symbols resembling an 'I'.
+
+Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
 
 If everything was as you expected in question 4.a, then hit the play button again to continue debugging. Repeat the QuickWatch process (inspecting the grid variable) when you hit the next breakpoint.
 
