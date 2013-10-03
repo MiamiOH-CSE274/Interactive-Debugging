@@ -15,6 +15,7 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+* 
 	Thr purpose of this program is to produce an HTML output file that displays a sideLength x sideLength Sierpinski triangle.
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
 	Yes, the program produce output. The output will be an HTML file. 
