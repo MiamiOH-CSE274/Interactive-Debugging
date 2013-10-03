@@ -85,9 +85,9 @@ Well, the weird characters are gone. Now there are only spaces and 8s, so that i
 
 Repeat step 4, and try to identify which of the three stages of the program is causing this incorrect output. If grid only contains longs stripes of 8s, then there are probably still problems in the first two stages. If grid contains a mix of 8s and spaces, then the problem is likely in the printing.
 
-* 8.a) What should grid look like at the end of the first stage? What does it actually look like?
-* 8.b) What should grid look like at the end of the second stage? What does it actually look like?
-* 8.c) Which section is the current bug in?
+* 8.a) What should grid look like at the end of the first stage? What does it actually look like? It should look like clumps of 8's around the corners and right now it looks like mostly blank space with a couple of mixed in 8's
+* 8.b) What should grid look like at the end of the second stage? What does it actually look like? It should look like evenly spaced 8's and space like they were the sides of triangles. It actually looks like a lot of 8's and blank space mixed all together 
+* 8.c) Which section is the current bug in? The bug is currently in the printing section
  
 Step 9
 ------
