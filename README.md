@@ -145,14 +145,20 @@ Step 11
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
 
 * 11.a) Where is the bug, and how should you fix it?
+
+	This time the bug is in the line where the variable p3x is assigned a value.  This variable's value should not be "sideLength - 1", but should instead be "sideLength/2.0".
+
 * 11.b) If I had not commented my code, how would you have discovered which variable to fix? What if I had used crazy variable names like “fooa, foob, fooc, food, fooe, foof” instead of “p1x, p1y, p2x, p2y, p3x, p3y”?
 
+	It would have been significantly more difficult to find the bug if there were no comments.  I most likely would have had to go through the code line by line until I found the error, which would be both time consuming and frustrating.
  
 Step 12
 -------
 In the previous step, you should have discovered that the line “double p3x = sideLength -1;” is incorrect. Instead, it should be “double p3x = sideLength/2.0;”. Make the change, and re-run your program to see how it affects the output. 
 
 * 12.a) What is still wrong with the output?
+
+	The whole triangle is still not being displayed, and looks somewhat like it is leaning.
 
 Step 13
 -------
