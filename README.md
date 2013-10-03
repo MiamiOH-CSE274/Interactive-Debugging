@@ -136,7 +136,7 @@ You have a couple of options now. One is to just step through the loop for a whi
 
 The other option is to create a break point within each condition. So, for example, put a break on “case 0”,  a break on “case 1” and a break on “case 2”. Then run the program in the debugger. The first time you hit a particular breakpoint (say the case 2 breakpoint), step through the code and make sure it does what you expected. If so, you can remove that breakpoint, and continue debugging. This way you can try all three cases without having to do a whole lot of manual stepping.
 
-* 14.a) What was the bug?
+* 14.a) What was the bug? The bug is that it will go through multiple cases in one iteration
 
  
 Step 15
