@@ -56,9 +56,13 @@ When your program stops at the first breakpoint, scroll up until you find the va
 
 Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
 
+	Before the bug started hopping, I would expect to find a lot of empty space in the grid.  However, when I looked at the grid I saw a lot of weird symbols resembling an 'I'.
+
 If everything was as you expected in question 4.a, then hit the play button again to continue debugging. Repeat the QuickWatch process (inspecting the grid variable) when you hit the next breakpoint.
 
 * 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?
+
+	Based on what I've seen so far, I would say that the first bug is in the setup portion of the program.
 
 Step 5
 ------
