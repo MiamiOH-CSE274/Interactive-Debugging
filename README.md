@@ -129,8 +129,8 @@ interaction between for loop and line 65. I began to checkout the for loop caref
 
 
 
-
-------
+Step 7
+------
 
 
 In the previous step you should have identified the bug: The for loop has a semi-colon after it! This means that the “body of the loop” was not getting executed over and over (as we desired), but instead was only executed once, when i was 40000. 
