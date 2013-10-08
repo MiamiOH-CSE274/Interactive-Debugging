@@ -204,7 +204,18 @@ Step 11
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
 
 * 11.a) Where is the bug, and how should you fix it?
+
+Since it's on the top, so the value of p3y is correct. But if it is on the
+middle, the value of p3x is INCORRECT. It should be: double p3x = sideLength/2.0.
+
+
 * 11.b) If I had not commented my code, how would you have discovered which variable to fix? What if I had used crazy variable names like “fooa, foob, fooc, food, fooe, foof” instead of “p1x, p1y, p2x, p2y, p3x, p3y”?
+
+
+Since it is on the middle of the top.
+In grid[((int)blah) * sideLength + (int)blahblahblah] = '8'.
+blah supposes to be 0 and blahblahblah supposes to be sideLength/2.
+
 
  
 Step 12
