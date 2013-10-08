@@ -184,7 +184,7 @@ I set my breakpoint on line 115(At the beginning of nested-loop) and step over
 until the value of i is 3(I think it is enough). I realized the value of 
 grid[i*sideLength + i] remains the same up to the third line in the grid.
 So I certainly can say grid[i*sideLength + i] is wrong. I guessed the 
-grid[i*sideLength + i] should be grid[j*sideLength + i] or grid[i*sideLength + j] or grid[j*sideLength + j]. Because involving j can keep switching the positionon the gird more frequently.
+grid[i*sideLength + i] should be grid[j*sideLength + i] or grid[i*sideLength + j] or grid[j*sideLength + j]. Because involving j can keep switching the position on the gird more frequently.
 
 
 
@@ -193,6 +193,11 @@ Step 10
 In the previous step you should have discovered that the “grid[i*sideLength +i]” is incorrect … you really wanted “grid[i*sideLength + j]”. Make the fix, and re-run your code to see if we are closer to having correct output.
 
 * 10.a) What is wrong with the picture now?
+
+It's hard for me to describe this. I would say it prints out all of the 
+character 8 on the left side.
+
+
 
 Step 11
 -------
