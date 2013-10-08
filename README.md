@@ -84,6 +84,12 @@ If everything was as you expected in question 4.a, then hit the play button agai
 
 * 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?
 
+I did same checking on making the triangle and printing the triangle, but the
+grid contains same things as I did the checking on setup. So I would say the 
+setup contains our first bug.
+
+
+
 Step 5
 ------
 In the previous step you should have identified that the bug is occurring in the setup phase of the program. The evidence is that, at the end of the startup phase, the array called “grid” contains lots of weird looking characters, instead of spaces, as we would expect.
