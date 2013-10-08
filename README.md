@@ -254,6 +254,9 @@ The other option is to create a break point within each condition. So, for examp
 
 * 14.a) What was the bug?
 
+Missing a BREAK at the end of Case 0. 
+I already provided my answer on Step 13.
+
  
 Step 15
 -------
