@@ -152,8 +152,22 @@ Well, the weird characters are gone. Now there are only spaces and 8s, so that i
 Repeat step 4, and try to identify which of the three stages of the program is causing this incorrect output. If grid only contains longs stripes of 8s, then there are probably still problems in the first two stages. If grid contains a mix of 8s and spaces, then the problem is likely in the printing.
 
 * 8.a) What should grid look like at the end of the first stage? What does it actually look like?
+
+It should look like a empty gird. And it actually looks like a empty grid too.
+
+
 * 8.b) What should grid look like at the end of the second stage? What does it actually look like?
+
+It should look like a grid contains empty spaces and character 8. Because the 
+second stage is just trying to fill out the grid. And it actually looks like 
+what I expected too.
+
+
 * 8.c) Which section is the current bug in?
+
+Base on (a) and (b), the bug probably in section 3.
+
+
  
 Step 9
 ------
