@@ -15,12 +15,22 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
-To make triangles.
+
+To generate a Sierpinski triangle. 
+
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
-The output is "Hello World" in the screen. 
+
+I assume this question is asking the correct output. The output is a 
+sideLength * sideLength Sierpinski triangle to be printed as HTML to the file
+named in OUTPUTFILE.
+
+
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
-Yes, in this program is double. It is provided by simulating a bug like jumping
-around to make points in order to create triangles.
+
+Yes, it does. The input is an integer variable called sideLength. When you call
+the function doTriangle(int sideLength) in main, you just pick a triangle size
+let's say you set sideLength to be 100. When you call this function you will need to do doTriangle(100). This is how it is provided.
+
 
 Step 2
 -------
