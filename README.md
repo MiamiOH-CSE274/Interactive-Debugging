@@ -139,6 +139,12 @@ Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the prog
 
 * 7.a) What problems were fixed in the preceding steps? What errors can we see now?
  
+
+We fixed the problem which the grid can not be set to correct value. And now 
+the current errors turn out to be the grid can not form a sierpinski triangle.
+
+
+
 Step 8
 ------
 Well, the weird characters are gone. Now there are only spaces and 8s, so that is good … but now we can see that what is getting printed out is not very triangle-like. In fact, did you notice that each row just contains repeats of the same character? Some rows have 8s, some have spaces, but it seems like there are not any rows that contain a mix.
