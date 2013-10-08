@@ -96,6 +96,10 @@ In the previous step you should have identified that the bug is occurring in the
 
 * 5.a) Which lines in the code look like they should set the grid to be full of spaces?
 
+Line 65 when it loops through grid and set grid[i] = ' ';
+
+
+
 Step 6
 ------
 Once you have found the line that says “grid[i] = ‘ ‘;”, it may or may not be obvious to you what the bug is. The bug is of a type that is VERY easy to over-look, and probably most of the class doesn’t see it. Imagine that you can’t find the bug just by looking at the code. Next, we will use interactive debugging to narrow things down a bit more.
