@@ -59,7 +59,11 @@ The characters to print out in the main part of the file are stored in a big arr
 
 * 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)
 
- 
+
+By using debugging tools to check each of these three main parts.
+
+
+
 Step 4
 ------
 I want to determine when the trash starts to appear in “grid.” In order to do this I will set two breakpoints: One at line 85 (the last line of the “Setting up the problem” section), and one at line 115 (the first line of the “Printing grid” section).
