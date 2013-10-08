@@ -38,6 +38,19 @@ Build and run Sierpinski. An output file called “triangle.html” should be pl
 
 * 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
 
+The current output seems like only has a title:
+
+A Sierpinski Triangle, size 200
+
+And a branch characters I don't know below it.
+
+The expected output has a title:
+
+A Sierpinski Triangle, size 200
+
+And a big triangle which made by number eight.
+
+
 Step 3
 ------
 The first problem I noticed is that I expected the main part of the print-out to consists only of spaces and 8s, but the output I actually got has some strange characters in it.
