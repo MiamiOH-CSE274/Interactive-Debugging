@@ -111,11 +111,28 @@ At first it looks like this code should work. The for loop seems to be using its
 The “step over” command in the debugging menu is designed to make the program execute the current line, and then stop on the next line of code that would be executed. In a loop, for example, each step should move you one line down the body of the loop, then when you step at the end of the loop it should take you back to the top. You should step through the body of the loop one time for each iteration of the loop.
 
 * 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?
+
+I would expect to hit 40000 times.
+
+
 * 6.b) Try hitting “step over” repeatedly, and see if it does what you expected.
+
+NO. Because when I hit Step Over. It gets out of the for loop and go down to 
+line 69. 
+
+
 * 6.c) What is the bug?
 
-Step 7
-------
+At this point, we can see the debugging window shows for loop is still be executed successfully. However, the value has not been set to gird successfully. Which
+means the line 65 has not been executed successfully. Hence, there is no 
+interaction between for loop and line 65. I began to checkout the for loop carefully and found out there is a semicolon at the end of line 63.
+
+
+
+
+------
+
+
 In the previous step you should have identified the bug: The for loop has a semi-colon after it! This means that the “body of the loop” was not getting executed over and over (as we desired), but instead was only executed once, when i was 40000. 
 
 Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the program, to generate a new triangle.html. Look at it, and see how it looks. 
