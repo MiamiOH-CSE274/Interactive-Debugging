@@ -177,6 +177,16 @@ Can you find the bug? If not, try stepping through the doubly-nested loop. You c
 
 * 9.a) What is the bug in the printing loop?
  
+If the bug occurs in print method. The only possible place that causes this bug
+is on line 119 : outfile << grid[i*sideLength + i ];
+Therefore, I added grid[i*sideLength + i] on my watch list to track its value.
+I set my breakpoint on line 115(At the beginning of nested-loop) and step over
+until the value of i is 3(I think it is enough). I realized the value of 
+grid[i*sideLength + i] remains the same up to the third line in the grid.
+So I certainly can say grid[i*sideLength + i] is wrong.
+
+
+
 Step 10
 -------
 In the previous step you should have discovered that the “grid[i*sideLength +i]” is incorrect … you really wanted “grid[i*sideLength + j]”. Make the fix, and re-run your code to see if we are closer to having correct output.
