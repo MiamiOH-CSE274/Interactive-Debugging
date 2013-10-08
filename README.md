@@ -183,7 +183,8 @@ Therefore, I added grid[i*sideLength + i] on my watch list to track its value.
 I set my breakpoint on line 115(At the beginning of nested-loop) and step over
 until the value of i is 3(I think it is enough). I realized the value of 
 grid[i*sideLength + i] remains the same up to the third line in the grid.
-So I certainly can say grid[i*sideLength + i] is wrong.
+So I certainly can say grid[i*sideLength + i] is wrong. I guessed the 
+grid[i*sideLength + i] should be grid[j*sideLength + i] or grid[i*sideLength + j] or grid[j*sideLength + j]. Because involving j can keep switching the positionon the gird more frequently.
 
 
 
