@@ -234,6 +234,11 @@ Things are looking pretty good now. We have something triangle-like, and the top
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
 
+
+Well,OK.. things are getting interesting at this point.It seems like there is nothing on the left side. Mathematically, there is nothing wrong with setting 
+coordinates. But the left side is missing. It made me thing about the first corner of the triangle is in the lower left. Nothing wrong with settig coordinate. And I kept looking down and found out this program generates a ramdom case to decide which position to start the bug. Case 0 is from the lower left, Case 1 is lower right and Case 2 is middle top. I was thinking it might have some problems on lower left position. It seems like this lower left case has never been executed. I used switch() very often and eventually I found out it miss a BREAK at the end of Case 0.
+
+
  
 Step 14
 -------
