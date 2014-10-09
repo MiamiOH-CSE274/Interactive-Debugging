@@ -12,8 +12,11 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+To print an html file of a sierpinski fractal triangle.
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+The output is a file that ends up in a file with the visual studio project.
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+The program will accept an input of triangle size in the main method.
 
 Step 2
 -------
