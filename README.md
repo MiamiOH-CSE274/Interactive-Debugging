@@ -66,8 +66,11 @@ At first it looks like this code should work. The for loop seems to be using its
 The “step over” command in the debugging menu is designed to make the program execute the current line, and then stop on the next line of code that would be executed. In a loop, for example, each step should move you one line down the body of the loop, then when you step at the end of the loop it should take you back to the top. You should step through the body of the loop one time for each iteration of the loop.
 
 * 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?
+You would expect to repeat the grid[i]=' '; line 40000 times when using the "step over" function. 
 * 6.b) Try hitting “step over” repeatedly, and see if it does what you expected.
+It does not. The pointer immediately leaves the loop.
 * 6.c) What is the bug?
+The loop is not working correctly.
 
 Step 7
 ------
