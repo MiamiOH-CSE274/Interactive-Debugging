@@ -1,4 +1,4 @@
-Interactive-Debugging
+﻿Interactive-Debugging
 =====================
 
 Lab on using the interactive debugger
@@ -12,15 +12,21 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+	The purpose of this program is to print out Sierpinski's triangle.
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+	The function does not return anything but the program produces a file that we print to and is located in the folder of the program.
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+	The program accepts an input that is an int which is provided when the method is called.
 
 Step 2
 -------
 Build and run Sierpinski. An output file called “triangle.html” should be placed in your project directory, along with your source code. The file should exist, but you will notice that its contents do not look much like the correct output.
 
 * 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
-
+	The current output does not print to the file correctly.
+		-I's are printed instead of 8's
+		-a triangle is not printed
+		-gaps are not made
 Step 3
 ------
 The first problem I noticed is that I expected the main part of the print-out to consists only of spaces and 8s, but the output I actually got has some strange characters in it.
@@ -28,6 +34,7 @@ The first problem I noticed is that I expected the main part of the print-out to
 The characters to print out in the main part of the file are stored in a big array called “grid.” The program is broken into three main parts: (1) Setting up the problem, (2) Filling out “grid,” and (3) Printing “grid.” 
 
 * 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)
+	Set a breakpoint were the method is being called and step into it until the issue is found within the code.
 
  
 Step 4
@@ -39,18 +46,21 @@ Next, I will hit the green play button in my toolbar, to “Start Debugging.” 
 When your program stops at the first breakpoint, scroll up until you find the variable “grid” … you shouldn’t have to go up far. Right-click on “grid”, and select QuickWatch. This will open a window that shows you the variable name, its value (which is what the variable contains right now), and its type.
 
 * 4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point?
+	Grid should contain a bunch of empty spaces and three 8's representing the corners of the triangle.
 
 Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
 
 If everything was as you expected in question 4.a, then hit the play button again to continue debugging. Repeat the QuickWatch process (inspecting the grid variable) when you hit the next breakpoint.
 
 * 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?
+	The setup
 
 Step 5
 ------
 In the previous step you should have identified that the bug is occurring in the setup phase of the program. The evidence is that, at the end of the startup phase, the array called “grid” contains lots of weird looking characters, instead of spaces, as we would expect.
 
 * 5.a) Which lines in the code look like they should set the grid to be full of spaces?
+lines 62 - 66
 
 Step 6
 ------
@@ -63,8 +73,11 @@ At first it looks like this code should work. The for loop seems to be using its
 The “step over” command in the debugging menu is designed to make the program execute the current line, and then stop on the next line of code that would be executed. In a loop, for example, each step should move you one line down the body of the loop, then when you step at the end of the loop it should take you back to the top. You should step through the body of the loop one time for each iteration of the loop.
 
 * 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?
+	40000
 * 6.b) Try hitting “step over” repeatedly, and see if it does what you expected.
+	it does not
 * 6.c) What is the bug?
+	its not iterating through the loop i believe
 
 Step 7
 ------
@@ -73,6 +86,7 @@ In the previous step you should have identified the bug: The for loop has a semi
 Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the program, to generate a new triangle.html. Look at it, and see how it looks. 
 
 * 7.a) What problems were fixed in the preceding steps? What errors can we see now?
+	THe program now prints out the correct character. It does not print them in the shape of a triangle.
  
 Step 8
 ------
