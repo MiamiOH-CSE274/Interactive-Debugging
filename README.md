@@ -42,13 +42,13 @@ Next, I will hit the green play button in my toolbar, to “Start Debugging.” 
 When your program stops at the first breakpoint, scroll up until you find the variable “grid” … you shouldn’t have to go up far. Right-click on “grid”, and select QuickWatch. This will open a window that shows you the variable name, its value (which is what the variable contains right now), and its type.
 
 * 4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point?
-
+I would expect the grid to contain a bunch of the "space" characters and three '8' characters at the triangle points before the bug starts hopping, but instead grid contains a bunch of the accented "I" characters.
 Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
 
 If everything was as you expected in question 4.a, then hit the play button again to continue debugging. Repeat the QuickWatch process (inspecting the grid variable) when you hit the next breakpoint.
 
 * 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?
-
+I think the setup part of the program contains this bug.
 Step 5
 ------
 In the previous step you should have identified that the bug is occurring in the setup phase of the program. The evidence is that, at the end of the startup phase, the array called “grid” contains lots of weird looking characters, instead of spaces, as we would expect.
