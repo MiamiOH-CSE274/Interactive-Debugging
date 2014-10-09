@@ -60,7 +60,7 @@ void doTriangle(int sideLength)
 	grid[sideLength*sideLength] = '\0';
 
 	int i;
-	for(i=0; i < sideLength*sideLength; i++);
+	for(i=0; i < sideLength*sideLength; i++)
 	{
 		grid[i] = ' ';
 	}
@@ -116,7 +116,7 @@ void doTriangle(int sideLength)
 	{
 		for(int j=0;j<sideLength; j++)
 		{
-			outfile << grid[i*sideLength + i];
+			outfile << grid[i*sideLength + j];
 		}
 		outfile << endl;
 	}

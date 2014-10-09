@@ -112,6 +112,7 @@ Step 10
 In the previous step you should have discovered that the “grid[i*sideLength +i]” is incorrect … you really wanted “grid[i*sideLength + j]”. Make the fix, and re-run your code to see if we are closer to having correct output.
 
 * 10.a) What is wrong with the picture now?
+The 'triangle' only is printed half-way and stops in a vertical line.
 
 Step 11
 -------
