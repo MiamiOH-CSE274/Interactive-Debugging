@@ -76,7 +76,7 @@ void doTriangle(int sideLength)
 	grid[((int)p2y)*sideLength + (int)p2x] = '8';
 
 	//The third corner is in the middle of the top
-	double p3x = sideLength - 1;
+	double p3x = sideLength/2;
 	double p3y = 0;
 	grid[((int)p3y)*sideLength + (int)p3x] = '8';
 
