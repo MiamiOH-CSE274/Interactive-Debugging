@@ -1,4 +1,4 @@
-Interactive-Debugging
+﻿Interactive-Debugging
 =====================
 
 Lab on using the interactive debugger
@@ -12,9 +12,11 @@ Step 1
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
 * 1.a) What is the purpose of this program?
+The program draws the Sierpinski triangle fractal to an html file.  It first draws the three points of the triangle, then picks random points that are halfway between the points, which will create the fractal.
 * 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+The program creates a file, but does not really have output.  The file is in html, and it ends up among the project files.
 * 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
-
+The program does accept input. It has an int parameter that represents the side length of the triangle. The input is hard-coded in.
 Step 2
 -------
 Build and run Sierpinski. An output file called “triangle.html” should be placed in your project directory, along with your source code. The file should exist, but you will notice that its contents do not look much like the correct output.
