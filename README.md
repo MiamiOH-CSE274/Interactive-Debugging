@@ -23,6 +23,8 @@ Step 2
 Build and run Sierpinski. An output file called “triangle.html” should be placed in your project directory, along with your source code. The file should exist, but you will notice that its contents do not look much like the correct output.
 
 * 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
+* -Does not create the correct shape of the Sierpinski Triangle and instead creates a rectangle.
+* -For most of the rectangle, the wrong character is printed.
 
 Step 3
 ------
