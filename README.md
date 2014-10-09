@@ -88,9 +88,11 @@ Well, the weird characters are gone. Now there are only spaces and 8s, so that i
 Repeat step 4, and try to identify which of the three stages of the program is causing this incorrect output. If grid only contains longs stripes of 8s, then there are probably still problems in the first two stages. If grid contains a mix of 8s and spaces, then the problem is likely in the printing.
 
 * 8.a) What should grid look like at the end of the first stage? What does it actually look like?
+At the end of the first stage, there should be three '8's that represent the endpoints of the triangle. There are three '8's in grid, and they seem to be in spots that would represent the endpoints of the triangle.
 * 8.b) What should grid look like at the end of the second stage? What does it actually look like?
+At the end of the second stage (where the grid is filled in), the grid should contain '8's and spaces, which it does.  It does not appear to have the lines of '8's and spaces that appeared as our problem.  The spaces and '8's are mixed together.
 * 8.c) Which section is the current bug in?
- 
+Since stages one and two appear to do their functions correctly, the bug must be in stage three.
 Step 9
 ------
 At the end of section 1, grid was mostly empty, as we expected. At the end of section 2, grid contained a mix of 8s and spaces, which was also as we expected. Hence, we suspect that the bug must be in the printing section (roughly lines 115-122). Remember that we observed that each row printed the same character over and over again.
