@@ -23,6 +23,8 @@ Step 2
 Build and run Sierpinski. An output file called “triangle.html” should be placed in your project directory, along with your source code. The file should exist, but you will notice that its contents do not look much like the correct output.
 
 * 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
+The format is not correct and rather than all 8 is a mix of 8 and odd non-numerical characters.
+
 
 Step 3
 ------
@@ -31,6 +33,7 @@ The first problem I noticed is that I expected the main part of the print-out to
 The characters to print out in the main part of the file are stored in a big array called “grid.” The program is broken into three main parts: (1) Setting up the problem, (2) Filling out “grid,” and (3) Printing “grid.” 
 
 * 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)
+Setting break points, looking at the call stack while debugging or just looking through the code again thinking about what will actually run.
 
  
 Step 4
