@@ -60,7 +60,7 @@ void doTriangle(int sideLength)
 	grid[sideLength*sideLength] = '\0';
 
 	int i;
-	for(i=0; i < sideLength*sideLength; i++);
+	for(i=0; i < sideLength*sideLength; i++)
 	{
 		grid[i] = ' ';
 	}

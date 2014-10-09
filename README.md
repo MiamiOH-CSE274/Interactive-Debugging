@@ -79,6 +79,7 @@ In the previous step you should have identified the bug: The for loop has a semi
 Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the program, to generate a new triangle.html. Look at it, and see how it looks. 
 
 * 7.a) What problems were fixed in the preceding steps? What errors can we see now?
+All the accented "I"s have disappeared and were replaced with spaces.  However, there are lines of the '8' character that should not be there. Plus, there is no top point to the triangle.
  
 Step 8
 ------
