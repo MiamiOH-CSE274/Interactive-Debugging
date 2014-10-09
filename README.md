@@ -135,7 +135,7 @@ Step 13
 Things are looking pretty good now. We have something triangle-like, and the top point is in the right place. Something still seems weird though … it is as if the little hopping bug prefers to jump down and to the right … there ARE some 8s in the left half of the screen, but almost all of the triangles seem heavily skewed to the left, and down.
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
-
+Still a problem with the generation of the triangle.
  
 Step 14
 -------
@@ -150,6 +150,7 @@ You have a couple of options now. One is to just step through the loop for a whi
 The other option is to create a break point within each condition. So, for example, put a break on “case 0”,  a break on “case 1” and a break on “case 2”. Then run the program in the debugger. The first time you hit a particular breakpoint (say the case 2 breakpoint), step through the code and make sure it does what you expected. If so, you can remove that breakpoint, and continue debugging. This way you can try all three cases without having to do a whole lot of manual stepping.
 
 * 14.a) What was the bug?
+Missing break statement after case 1.
 
  
 Step 15

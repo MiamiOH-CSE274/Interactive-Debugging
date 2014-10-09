@@ -100,6 +100,7 @@ void doTriangle(int sideLength)
 		case 0:
 			curx = (curx + p1x)/2.0;
 			cury = (cury + p1y)/2.0;
+			break;
 		case 1:
 			curx = (curx + p2x)/2.0;
 			cury = (cury + p2y)/2.0;
