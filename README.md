@@ -52,13 +52,14 @@ Hint: In order to get a better look at the contents of grid (which is an array o
 If everything was as you expected in question 4.a, then hit the play button again to continue debugging. Repeat the QuickWatch process (inspecting the grid variable) when you hit the next breakpoint.
 
 * 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?
-* Making the Triangle
+* Setup
 
 Step 5
 ------
 In the previous step you should have identified that the bug is occurring in the setup phase of the program. The evidence is that, at the end of the startup phase, the array called “grid” contains lots of weird looking characters, instead of spaces, as we would expect.
 
 * 5.a) Which lines in the code look like they should set the grid to be full of spaces?
+* 63-66
 
 Step 6
 ------
@@ -71,8 +72,9 @@ At first it looks like this code should work. The for loop seems to be using its
 The “step over” command in the debugging menu is designed to make the program execute the current line, and then stop on the next line of code that would be executed. In a loop, for example, each step should move you one line down the body of the loop, then when you step at the end of the loop it should take you back to the top. You should step through the body of the loop one time for each iteration of the loop.
 
 * 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?
+* 40,000 times
 * 6.b) Try hitting “step over” repeatedly, and see if it does what you expected.
-* 6.c) What is the bug?
+* 6.c) What is the bug? There is a semi-colon after the for loop statement
 
 Step 7
 ------
@@ -81,6 +83,7 @@ In the previous step you should have identified the bug: The for loop has a semi
 Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the program, to generate a new triangle.html. Look at it, and see how it looks. 
 
 * 7.a) What problems were fixed in the preceding steps? What errors can we see now?
+* grid[] now contains empty spaces and '8's, but the Sierpinski Triangle pattern is still not displayed.
  
 Step 8
 ------
