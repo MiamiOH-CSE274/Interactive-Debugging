@@ -92,8 +92,11 @@ Well, the weird characters are gone. Now there are only spaces and 8s, so that i
 Repeat step 4, and try to identify which of the three stages of the program is causing this incorrect output. If grid only contains longs stripes of 8s, then there are probably still problems in the first two stages. If grid contains a mix of 8s and spaces, then the problem is likely in the printing.
 
 * 8.a) What should grid look like at the end of the first stage? What does it actually look like?
+The grid should be filled with empty spaces, and it is at this point.
 * 8.b) What should grid look like at the end of the second stage? What does it actually look like?
+The grid should contain a mix of spaces and '8's, and it does at this point.
 * 8.c) Which section is the current bug in?
+This means that the current bug is in the printing section of the code.
  
 Step 9
 ------
@@ -102,19 +105,23 @@ At the end of section 1, grid was mostly empty, as we expected. At the end of se
 Can you find the bug? If not, try stepping through the doubly-nested loop. You can put your mouse over ANY variable to see what its current value is, so you don’t have to use QuickWatch unless you want to look at something big (like a whole array, or a class structure). As you step through, you should be looking for anything that could lead to the same character being printed over and over, and only changing from line to line.
 
 * 9.a) What is the bug in the printing loop?
+in the statement "grid[i*sideLength + i], i does not change until the j has done 200 iterations, so the code is printing out what is at 0 for the whole first line, which means that it is trying to print one value for each line.
  
 Step 10
 -------
 In the previous step you should have discovered that the “grid[i*sideLength +i]” is incorrect … you really wanted “grid[i*sideLength + j]”. Make the fix, and re-run your code to see if we are closer to having correct output.
 
 * 10.a) What is wrong with the picture now?
+Now, the entire array is printed as a space with no characters in the mix.
 
 Step 11
 -------
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
 
 * 11.a) Where is the bug, and how should you fix it?
+The bug is where the top corner of the triangle is supposed to be set. It currently is placing it in the top right corner instead of the top middle.
 * 11.b) If I had not commented my code, how would you have discovered which variable to fix? What if I had used crazy variable names like “fooa, foob, fooc, food, fooe, foof” instead of “p1x, p1y, p2x, p2y, p3x, p3y”?
+I would have discovered which variable to fix based off of where the code was trying to place each corner. If I knew that we were trying to make a triangle, then I would know that we needed a corner in the bottom left, bottom right, and top middle, and could figure out which set of variables were placing a point somewhere else based off of this information.
 
  
 Step 12
@@ -122,13 +129,14 @@ Step 12
 In the previous step, you should have discovered that the line “double p3x = sideLength -1;” is incorrect. Instead, it should be “double p3x = sideLength/2.0;”. Make the change, and re-run your program to see how it affects the output. 
 
 * 12.a) What is still wrong with the output?
+It is only printing out part of the right side of the triangle.
 
 Step 13
 -------
 Things are looking pretty good now. We have something triangle-like, and the top point is in the right place. Something still seems weird though … it is as if the little hopping bug prefers to jump down and to the right … there ARE some 8s in the left half of the screen, but almost all of the triangles seem heavily skewed to the left, and down.
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
-
+I can't seem to find any obvious reasons why it would be printing incorrectly, so I am guessing that the code is creating the triangle wrong.
  
 Step 14
 -------
@@ -143,6 +151,7 @@ You have a couple of options now. One is to just step through the loop for a whi
 The other option is to create a break point within each condition. So, for example, put a break on “case 0”,  a break on “case 1” and a break on “case 2”. Then run the program in the debugger. The first time you hit a particular breakpoint (say the case 2 breakpoint), step through the code and make sure it does what you expected. If so, you can remove that breakpoint, and continue debugging. This way you can try all three cases without having to do a whole lot of manual stepping.
 
 * 14.a) What was the bug?
+'break' was not included at the end of case zero!
 
  
 Step 15
