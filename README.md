@@ -134,8 +134,8 @@ Step 13
 -------
 Things are looking pretty good now. We have something triangle-like, and the top point is in the right place. Something still seems weird though … it is as if the little hopping bug prefers to jump down and to the right … there ARE some 8s in the left half of the screen, but almost all of the triangles seem heavily skewed to the left, and down.
 
-* 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
-
+* **13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.**
+I think the part of the code that picks the next random point the "bug" will hop to is not working correctly. I am not very familiar with switch blocks, but I noticed that case 1 and case 2 have break statements, but case 0 does not.
  
 Step 14
 -------
