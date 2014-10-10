@@ -11,17 +11,17 @@ Step 1
 ------
 Create a project file, and add sierpinski.cpp to the project. Also, look at correct-triangle.html to see an example of correct output. Skim/read the source code for sierpinski.cpp, and try to answer the following questions:
 
-* 1.a) What is the purpose of this program?
+* *1.a) What is the purpose of this program?*
 The program draws the Sierpinski triangle fractal to an html file.  It first draws the three points of the triangle, then picks random points that are halfway between the points, which will create the fractal.
-* 1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?
+* *1.b) Does the program produce output? If so, what kind of output is it, and where does it end up?*
 The program creates a file, but does not really have output.  The file is in html, and it ends up among the project files.
-* 1.c) Does the program accept input? If so, what kind of input, and how is it provided?
+* *1.c) Does the program accept input? If so, what kind of input, and how is it provided?*
 The program does accept input. It has an int parameter that represents the side length of the triangle. The input is hard-coded in.
 Step 2
 -------
 Build and run Sierpinski. An output file called “triangle.html” should be placed in your project directory, along with your source code. The file should exist, but you will notice that its contents do not look much like the correct output.
 
-* 2.a) List all the ways that you can see that the current output of your program is different from the expected output.
+* *2.a) List all the ways that you can see that the current output of your program is different from the expected output.*
 First of all, every spot in the character array is filled, producing a solid block of characters rather than the triangle fractal. Also, in addition to using the character '8', a capital "I" with an accent is used often.
 Step 3
 ------
@@ -29,7 +29,7 @@ The first problem I noticed is that I expected the main part of the print-out to
 
 The characters to print out in the main part of the file are stored in a big array called “grid.” The program is broken into three main parts: (1) Setting up the problem, (2) Filling out “grid,” and (3) Printing “grid.” 
 
-* 3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)
+* *3.a) Explain one or two methods you could use to determine which of the three parts of the program is causing this first bug. (In step 4, I will tell you how I would do it.)*
 You could set breakpoints at different spots in the code, and use the debugger to see if the grid array is filling up the way you intend it to.  Alternatively, you could print the grid at different points in the program to see what it looks like at that stage.
 
  
@@ -41,19 +41,19 @@ Next, I will hit the green play button in my toolbar, to “Start Debugging.” 
 
 When your program stops at the first breakpoint, scroll up until you find the variable “grid” … you shouldn’t have to go up far. Right-click on “grid”, and select QuickWatch. This will open a window that shows you the variable name, its value (which is what the variable contains right now), and its type.
 
-* 4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point?
+* *4.a) What would you expect grid to contain before the bug starts hopping? What does it actually contain at this point?*
 I would expect the grid to contain a bunch of the "space" characters and three '8' characters at the triangle points before the bug starts hopping, but instead grid contains a bunch of the accented "I" characters.
 Hint: In order to get a better look at the contents of grid (which is an array of characters), in the QuickWatch window, select the drop-down box at the end of the “value” column and choose “text visualizer.” This should pop up a window that gives you view of everything contained in grid. The view in the QuickWatch window cuts off when it runs out of room.
 
 If everything was as you expected in question 4.a, then hit the play button again to continue debugging. Repeat the QuickWatch process (inspecting the grid variable) when you hit the next breakpoint.
 
-* 4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?
+* *4.b) Based on your observations so far, which of the three parts of the program (setup, making the triangle, printing the triangle) must contain our first bug?*
 I think the setup part of the program contains this bug.
 Step 5
 ------
 In the previous step you should have identified that the bug is occurring in the setup phase of the program. The evidence is that, at the end of the startup phase, the array called “grid” contains lots of weird looking characters, instead of spaces, as we would expect.
 
-* 5.a) Which lines in the code look like they should set the grid to be full of spaces?
+* *5.a) Which lines in the code look like they should set the grid to be full of spaces?*
 Lines 62-66 (the for loop) look like they should set the grid to be full of spaces.  Line 65 reads grid[i] = ' '; so I would expect this to set the contents of grid to be spaces.
 Step 6
 ------
@@ -65,11 +65,11 @@ At first it looks like this code should work. The for loop seems to be using its
 
 The “step over” command in the debugging menu is designed to make the program execute the current line, and then stop on the next line of code that would be executed. In a loop, for example, each step should move you one line down the body of the loop, then when you step at the end of the loop it should take you back to the top. You should step through the body of the loop one time for each iteration of the loop.
 
-* 6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?
+* *6.a) sideLength*sideLength = 40000, so how many times would you expect to hit the line “grid[i] = ‘ ‘” if you are just using “step over” repeatedly?*
 You would expect to repeat the grid[i]=' '; line 40000 times when using the "step over" function. 
-* 6.b) Try hitting “step over” repeatedly, and see if it does what you expected.
+* *6.b) Try hitting “step over” repeatedly, and see if it does what you expected.*
 It does not. The pointer immediately leaves the loop.
-* 6.c) What is the bug?
+* *6.c) What is the bug?*
 The loop is not working correctly.
 
 Step 7
@@ -78,7 +78,7 @@ In the previous step you should have identified the bug: The for loop has a semi
 
 Fix the bug by deleting the stray semi-colon. Then, re-build and re-run the program, to generate a new triangle.html. Look at it, and see how it looks. 
 
-* 7.a) What problems were fixed in the preceding steps? What errors can we see now?
+* *7.a) What problems were fixed in the preceding steps? What errors can we see now?*
 All the accented "I"s have disappeared and were replaced with spaces.  However, there are lines of the '8' character that should not be there. Plus, there is no top point to the triangle.
  
 Step 8
@@ -87,11 +87,11 @@ Well, the weird characters are gone. Now there are only spaces and 8s, so that i
 
 Repeat step 4, and try to identify which of the three stages of the program is causing this incorrect output. If grid only contains longs stripes of 8s, then there are probably still problems in the first two stages. If grid contains a mix of 8s and spaces, then the problem is likely in the printing.
 
-* 8.a) What should grid look like at the end of the first stage? What does it actually look like?
+* *8.a) What should grid look like at the end of the first stage? What does it actually look like?*
 At the end of the first stage, there should be three '8's that represent the endpoints of the triangle. There are three '8's in grid, and they seem to be in spots that would represent the endpoints of the triangle.
-* 8.b) What should grid look like at the end of the second stage? What does it actually look like?
+* *8.b) What should grid look like at the end of the second stage? What does it actually look like?*
 At the end of the second stage (where the grid is filled in), the grid should contain '8's and spaces, which it does.  It does not appear to have the lines of '8's and spaces that appeared as our problem.  The spaces and '8's are mixed together.
-* 8.c) Which section is the current bug in?
+* *8.c) Which section is the current bug in?*
 Since stages one and two appear to do their functions correctly, the bug must be in stage three.
 
 Step 9
@@ -100,14 +100,15 @@ At the end of section 1, grid was mostly empty, as we expected. At the end of se
 
 Can you find the bug? If not, try stepping through the doubly-nested loop. You can put your mouse over ANY variable to see what its current value is, so you don’t have to use QuickWatch unless you want to look at something big (like a whole array, or a class structure). As you step through, you should be looking for anything that could lead to the same character being printed over and over, and only changing from line to line.
 
-* 9.a) What is the bug in the printing loop?
+* *9.a) What is the bug in the printing loop?*
 When printing to the file, the line "grid[i*sideLength + i] is used.  However, the variable "i" is in the first loop of the nested loop, and the variable "j" is used in the second.  Therefore, when cycling through the second loop, i does not change, so "grid[i*sideLength + i]" will evaluate to the same character, and the same character will be printed for an entire line.  
  
 Step 10
 -------
 In the previous step you should have discovered that the “grid[i*sideLength +i]” is incorrect … you really wanted “grid[i*sideLength + j]”. Make the fix, and re-run your code to see if we are closer to having correct output.
 
-* 10.a) What is wrong with the picture now?
+* *10.a) What is wrong with the picture now?*
+All the characters seem to be pushed to the right of the picture, and there do not seem to be enough '8's. The top point of the triangle is on the right rather than in the middle.
 
 Step 11
 -------
