@@ -93,6 +93,7 @@ At the end of the first stage, there should be three '8's that represent the end
 At the end of the second stage (where the grid is filled in), the grid should contain '8's and spaces, which it does.  It does not appear to have the lines of '8's and spaces that appeared as our problem.  The spaces and '8's are mixed together.
 * 8.c) Which section is the current bug in?
 Since stages one and two appear to do their functions correctly, the bug must be in stage three.
+
 Step 9
 ------
 At the end of section 1, grid was mostly empty, as we expected. At the end of section 2, grid contained a mix of 8s and spaces, which was also as we expected. Hence, we suspect that the bug must be in the printing section (roughly lines 115-122). Remember that we observed that each row printed the same character over and over again.
