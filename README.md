@@ -127,7 +127,8 @@ Step 12
 -------
 In the previous step, you should have discovered that the line “double p3x = sideLength -1;” is incorrect. Instead, it should be “double p3x = sideLength/2.0;”. Make the change, and re-run your program to see how it affects the output. 
 
-* 12.a) What is still wrong with the output?
+* **12.a) What is still wrong with the output?**
+Only the right half of the triangle and each smaller triangle in the fractal is fully drawn, though there are just a couple '8's to the left.
 
 Step 13
 -------
