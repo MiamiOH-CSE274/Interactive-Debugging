@@ -68,7 +68,7 @@ In the previous step you should have identified that the bug is occurring in the
 
 * 5.a) Which lines in the code look like they should set the grid to be full of spaces?
 
-Line 65 in thw for loop
+Line 65 in the for loop
 
 Step 6
 ------
