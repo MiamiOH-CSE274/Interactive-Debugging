@@ -95,8 +95,11 @@ Well, the weird characters are gone. Now there are only spaces and 8s, so that i
 Repeat step 4, and try to identify which of the three stages of the program is causing this incorrect output. If grid only contains longs stripes of 8s, then there are probably still problems in the first two stages. If grid contains a mix of 8s and spaces, then the problem is likely in the printing.
 
 * 8.a) What should grid look like at the end of the first stage? What does it actually look like?
+	It should have three 8's spaced where the triangle corners should be. It looks like it should at this point.
 * 8.b) What should grid look like at the end of the second stage? What does it actually look like?
+	The grid should have a bunch of 8's. There should be points in the grid where there are clumps of 8's and clumps of spaces. It looks close to what it should.
 * 8.c) Which section is the current bug in?
+	the printing section.
  
 Step 9
 ------
@@ -105,33 +108,35 @@ At the end of section 1, grid was mostly empty, as we expected. At the end of se
 Can you find the bug? If not, try stepping through the doubly-nested loop. You can put your mouse over ANY variable to see what its current value is, so you don’t have to use QuickWatch unless you want to look at something big (like a whole array, or a class structure). As you step through, you should be looking for anything that could lead to the same character being printed over and over, and only changing from line to line.
 
 * 9.a) What is the bug in the printing loop?
- 
+ 	Its printing in the shae of a sqaure
 Step 10
 -------
 In the previous step you should have discovered that the “grid[i*sideLength +i]” is incorrect … you really wanted “grid[i*sideLength + j]”. Make the fix, and re-run your code to see if we are closer to having correct output.
 
 * 10.a) What is wrong with the picture now?
-
+	It's printing in the shape of a right triangle.
 Step 11
 -------
 It looks to me like we have a problem with the top vertex of the triangle. Why is it in the top right, instead of in the top center? Use the comments in my code to find the part that is supposed to set the top corner of the triangle to be in the center.
 
 * 11.a) Where is the bug, and how should you fix it?
+	The bug is in p3x
 * 11.b) If I had not commented my code, how would you have discovered which variable to fix? What if I had used crazy variable names like “fooa, foob, fooc, food, fooe, foof” instead of “p1x, p1y, p2x, p2y, p3x, p3y”?
+	You can tell by what each variable is set equal to.
 
- 
 Step 12
 -------
 In the previous step, you should have discovered that the line “double p3x = sideLength -1;” is incorrect. Instead, it should be “double p3x = sideLength/2.0;”. Make the change, and re-run your program to see how it affects the output. 
 
 * 12.a) What is still wrong with the output?
+	Most of the 8's are printed on the right side of the triangle.
 
 Step 13
 -------
 Things are looking pretty good now. We have something triangle-like, and the top point is in the right place. Something still seems weird though … it is as if the little hopping bug prefers to jump down and to the right … there ARE some 8s in the left half of the screen, but almost all of the triangles seem heavily skewed to the left, and down.
 
 * 13.a) Which portion of the code do you think is causing the problem? If you aren’t sure, you can try repeating step 4, as well as looking over the code.
-
+	I think its the printing still
  
 Step 14
 -------
@@ -147,7 +152,7 @@ The other option is to create a break point within each condition. So, for examp
 
 * 14.a) What was the bug?
 
- 
+ 	Case 0 goes to case 1
 Step 15
 -------
 In the previous step you should have discovered the problem was with the “case 0” case within the switch statement. Whenever you hit case 0, the bug hops halfway to point 1 … but then the program drops through into the “case 1” part, and the bug hops halfway to point 2, as well! This is why the bug seems to never hop left: Any time it hops left, it immediately hops to the right again. The fix for this is to insert the missing break statement, just before “case 1:”.
